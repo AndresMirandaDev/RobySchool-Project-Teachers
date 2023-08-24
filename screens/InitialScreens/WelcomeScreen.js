@@ -20,9 +20,7 @@ export default function WelcomeScreen({ navigation }) {
         endY={1}
       />
       <View style={styles.circle1}></View>
-      <View style={styles.circle2}></View>
-      <View style={styles.circle3}></View>
-      <View style={styles.circle4}></View>
+
       <View style={styles.logoContainer}>
         <AppText style={styles.title}>RobySchool</AppText>
       </View>
@@ -53,49 +51,20 @@ const styles = StyleSheet.create({
     minWidth: '100%',
   },
   circle1: {
-    height: 200,
-    width: 200,
-    backgroundColor: colors.green,
-    borderRadius: 100,
-    opacity: 0.2,
+    height: 900,
+    width: 900,
+    backgroundColor: colors.dark,
+    borderRadius: 45000,
+    opacity: 1,
     position: 'absolute',
-    left: 300,
-    bottom: 700,
+    left: 0,
+    bottom: 300,
   },
-  circle2: {
-    height: 200,
-    width: 200,
-    backgroundColor: colors.white,
-    borderRadius: 100,
-    opacity: 0.2,
-    position: 'absolute',
-    right: 300,
-    top: 600,
-  },
-  circle3: {
-    height: 200,
-    width: 200,
-    backgroundColor: colors.white,
-    borderRadius: 100,
-    opacity: 0.2,
-    position: 'absolute',
-    left: 200,
-    top: 700,
-  },
-  circle4: {
-    height: 200,
-    width: 200,
-    backgroundColor: colors.blue,
-    borderRadius: 100,
-    opacity: 0.2,
-    position: 'absolute',
-    right: 200,
-    top: 100,
-  },
+
   title: {
     fontWeight: 'bold',
     fontSize: 50,
-    color: colors.blue,
+    color: colors.white,
     fontFamily: 'System',
     textAlign: 'center',
   },

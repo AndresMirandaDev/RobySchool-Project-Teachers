@@ -1,5 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+
 import GradientBackground from '../../components/GradientBackground';
 import colors from '../../config/colors';
 import AppForm from '../../components/forms/AppForm';
@@ -47,6 +49,22 @@ export default function LoginScreen() {
             />
           </View>
         </AppForm>
+        <View style={styles.socialMedia}>
+          <View style={styles.facebook}>
+            <MaterialCommunityIcons
+              name="facebook"
+              color={colors.blue}
+              size={40}
+            />
+          </View>
+          <View style={styles.twitter}>
+            <MaterialCommunityIcons
+              name="twitter"
+              color={colors.white}
+              size={40}
+            />
+          </View>
+        </View>
       </View>
     </View>
   );
@@ -54,55 +72,29 @@ export default function LoginScreen() {
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    position: 'absolute',
-    alignSelf: 'center',
-    top: 260,
     width: '100%',
+    justifyContent: 'center',
+    alignContent: 'center',
   },
   container: {
     flex: 1,
     justifyContent: 'center',
   },
   circle1: {
-    height: 200,
-    width: 200,
-    backgroundColor: colors.green,
-    borderRadius: 100,
-    opacity: 0.2,
-    position: 'absolute',
-    left: 300,
-    bottom: 700,
-  },
-  circle2: {
-    height: 200,
-    width: 200,
-    backgroundColor: colors.white,
-    borderRadius: 100,
-    opacity: 0.2,
-    position: 'absolute',
-    right: 300,
-    top: 600,
-  },
-  circle3: {
-    height: 200,
-    width: 200,
-    backgroundColor: colors.white,
-    borderRadius: 100,
+    height: 500,
+    width: 500,
+    backgroundColor: colors.blue,
+    borderRadius: 250,
     opacity: 0.2,
     position: 'absolute',
     left: 200,
-    top: 700,
+    bottom: 150,
   },
-  circle4: {
-    height: 200,
-    width: 200,
-    backgroundColor: colors.blue,
-    borderRadius: 100,
-    opacity: 0.2,
-    position: 'absolute',
-    right: 200,
-    top: 100,
+  facebook: {
+    justifyContent: 'center',
+    alignContent: 'center',
   },
+
   formContainer: {
     padding: 20,
     backgroundColor: colors.darkOpacity,
@@ -112,5 +104,14 @@ const styles = StyleSheet.create({
     shadowOffset: { height: 4, width: 1 },
     shadowOpacity: 0.4,
     shadowRadius: 5,
+  },
+  socialMedia: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    padding: 20,
+  },
+  twitter: {
+    justifyContent: 'center',
+    alignContent: 'center',
   },
 });

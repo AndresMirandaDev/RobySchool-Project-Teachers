@@ -6,4 +6,5 @@ export default {
   dark: '#0c0c0c',
   darkOpacity: 'rgba(0,0,0,0.2805497198879552)',
   transparent: 'rgba(0,0,0,0)',
+  translucid: 'rgba(237,237,237,0.34217436974789917)',
 };

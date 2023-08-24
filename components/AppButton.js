@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 18,
-    textTransform: 'Capitalize',
+    textTransform: 'capitalize',
     color: colors.white,
     fontWeight: 'bold',
     fontFamily: defaultStyles.text.fontFamily,
