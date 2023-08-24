@@ -25,7 +25,7 @@ function AppNavigator() {
       <Tab.Navigator
         activeColor={colors.white}
         shifting={true}
-        barStyle={{ backgroundColor: colors.darkOpacity }}
+        barStyle={{ backgroundColor: colors.green }}
       >
         <Tab.Screen
           name="home"

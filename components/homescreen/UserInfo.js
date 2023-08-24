@@ -1,5 +1,6 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import AppText from '../AppText';
 import AvatarImage from '../AvatarImage';
@@ -10,10 +11,21 @@ export default function UserInfo() {
   return (
     <View style={styles.container}>
       <GradientBackground
-        color1={colors.dark}
-        color2={colors.dark}
+        color1={colors.blue}
+        color2={colors.green}
         startX={0.3}
       />
+
+      <View style={styles.alertsIcon}>
+        <TouchableOpacity>
+          <MaterialCommunityIcons name="bell" size={35} color={colors.white} />
+        </TouchableOpacity>
+      </View>
+      <View style={styles.settingsIcon}>
+        <TouchableOpacity>
+          <MaterialCommunityIcons name="cog" size={35} color={colors.white} />
+        </TouchableOpacity>
+      </View>
       <AvatarImage source={require('../../assets/mosh.jpg')} />
       <View style={styles.name}>
         <AppText style={styles.nameText}>Joaquín</AppText>
@@ -29,12 +41,17 @@ export default function UserInfo() {
 }
 
 const styles = StyleSheet.create({
+  alertsIcon: {
+    position: 'absolute',
+    left: 320,
+    top: 20,
+  },
   bottomCircle: {
     height: 200,
     width: 400,
     borderRadius: 100,
     position: 'absolute',
-    top: 100,
+    top: 90,
     left: 100,
     zIndex: -1,
     backgroundColor: colors.blue,
@@ -43,7 +60,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    borderBottomWidth: 5,
+    borderBottomWidth: 2,
     borderBottomColor: colors.blue,
   },
   name: {
@@ -57,5 +74,10 @@ const styles = StyleSheet.create({
   roleText: {
     textAlign: 'center',
     color: colors.white,
+  },
+  settingsIcon: {
+    position: 'absolute',
+    right: 320,
+    top: 20,
   },
 });
